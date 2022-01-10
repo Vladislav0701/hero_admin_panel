@@ -1,29 +1,55 @@
 {
-    "heroes": [
-        {
-            "id": 1,
-            "name": "Первый герой",
-            "description": "Первый герой в рейтинге!",
-            "element": "fire"
-        },
-        {
-            "id": 2,
-            "name": "Неизвестный герой",
-            "description": "Скрывающийся в тени",
-            "element": "wind"
-        },
-        {
-            "id": 3,
-            "name": "Морской герой",
-            "description": "Как аквамен, но не из DC",
-            "element": "water"
-        }
-    ],
-    "filters": [
-        "all",
-        "fire",
-        "water",
-        "wind",
-        "earth"
-    ]
+  "heroes": [
+    {
+      "id": 1,
+      "name": "Первый герой",
+      "description": "Первый герой в рейтинге!",
+      "element": "fire"
+    },
+    {
+      "id": 2,
+      "name": "Неизвестный герой",
+      "description": "Скрывающийся в тени",
+      "element": "wind"
+    },
+    {
+      "id": 3,
+      "name": "Морской герой",
+      "description": "Как аквамен, но не из DC",
+      "element": "water"
+    },
+    {
+      "id": "e048e789-f65a-4148-9798-4b9226ec5cb1",
+      "name": "Deedpool!",
+      "description": "@ 1 dasd as dasd asd ",
+      "element": "earth"
+    }
+  ],
+  "filters": [
+    {
+      "element": "all",
+      "label": "Все",
+      "className": "btn-outline-dark"
+    },
+    {
+      "element": "fire",
+      "label": "Огонь",
+      "className": "btn-danger"
+    },
+    {
+      "element": "water",
+      "label": "Вода",
+      "className": "btn-primary"
+    },
+    {
+      "element": "wind",
+      "label": "Ветер",
+      "className": "btn-success"
+    },
+    {
+      "element": "earth",
+      "label": "Земля",
+      "className": "btn-secondary"
+    }
+  ]
 }
