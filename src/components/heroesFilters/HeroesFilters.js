@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { actionFilter } from "../../actions";
 
 const HeroesFilters = () => {
-    const {activeFilter, filters, filtersLoadingStatus} = useSelector(state => state);
+    const {activeFilter, filters, filtersLoadingStatus} = useSelector(state => state.filters);
     const dispatch = useDispatch();
 
     const renderFilters = (filters, status) => {

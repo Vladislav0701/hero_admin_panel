@@ -4,7 +4,6 @@ const initialState = {
     filters: [],
     filtersLoadingStatus: 'idle',
     activeFilter: 'all',
-    filteredHeroes: []
 }
 
 const reducer = (state = initialState, action) => {
