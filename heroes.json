@@ -29,6 +29,12 @@
       "name": "Thor",
       "description": "dassd sdasa ",
       "element": "fire"
+    },
+    {
+      "id": "c633a76f-5b3d-4870-9102-494630f1fcc1",
+      "name": "Spider",
+      "description": "SAdd asd ad!!",
+      "element": "water"
     }
   ],
   "filters": [
