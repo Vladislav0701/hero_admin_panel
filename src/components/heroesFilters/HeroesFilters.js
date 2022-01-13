@@ -1,17 +1,18 @@
 import { useSelector, useDispatch } from "react-redux";
 
-import { actionFilter } from "../../actions";
+import { actionFilter } from "./filtersSlice";
 
 const HeroesFilters = () => {
     const {activeFilter, filters, filtersLoadingStatus} = useSelector(state => state.filters);
     const dispatch = useDispatch();
 
-    const renderFilters = (filters, status) => {
-        if (status === "loading") {
-            return <h5>Идет загрузка</h5>
-        } else if (status === "error") {
-            return <h5>Ошибка загрузки</h5>
-        }
+    if (filtersLoadingStatus === "loading") {
+        return <h5 className="text-center mt-5">Идет загрузка</h5>
+    } else if (filtersLoadingStatus === "error") {
+        return <h5 className="text-center mt-5">Ошибка загрузки</h5>
+    }
+
+    const renderFilters = (filters) => {
 
         if (filters && filters.length > 0) {
             return filters.map(({element, label, className}) => {

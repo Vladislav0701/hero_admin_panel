@@ -3,7 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { useHttp } from "../../hooks/http.hook";
 import { v4 as uuidv4 } from 'uuid';
 
-import { heroCreated, fetchFilters } from "../../actions";
+import { fetchFilters } from "../../components/heroesFilters/filtersSlice";
+import { heroCreated } from "../heroesList/heroesSlice";
 
 const HeroesAddForm = () => {
     const [heroName, setHeroName] = useState("");
@@ -14,7 +15,7 @@ const HeroesAddForm = () => {
     const {request} = useHttp();
 
     useEffect(() => {
-        dispatch(fetchFilters(request));
+        dispatch(fetchFilters());
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
@@ -35,12 +36,13 @@ const HeroesAddForm = () => {
         setHeroElement('');
     }
 
+    if (filtersLoadingStatus === "loading") {
+        return <option>Загрузка элементов</option>
+    } else if (filtersLoadingStatus === "error") {
+        return <option>Ошибка загрузки</option>
+    }
+
     const renderFilters = (filters, status) => {
-        if (status === "loading") {
-            <option>Загрузка элементов</option>
-        } else if (status === "error") {
-            <option>Ошибка загрузки</option>
-        }
 
         if (filters && filters.length > 0) {
             return filters.map(({label, element}) => {
