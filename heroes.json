@@ -17,48 +17,35 @@
       "name": "Морской герой",
       "description": "Как аквамен, но не из DC",
       "element": "water"
-    },
-    {
-      "id": "e048e789-f65a-4148-9798-4b9226ec5cb1",
-      "name": "Deedpool!",
-      "description": "@ 1 dasd as dasd asd ",
-      "element": "earth"
-    },
-    {
-      "id": "bee7cfaf-d3e4-45b9-8f53-601701b99ad6",
-      "name": "Thor",
-      "description": "dassd sdasa ",
-      "element": "fire"
-    },
-    {
-      "id": "c633a76f-5b3d-4870-9102-494630f1fcc1",
-      "name": "Spider",
-      "description": "SAdd asd ad!!",
-      "element": "water"
     }
   ],
   "filters": [
     {
+      "id": "all",
       "element": "all",
       "label": "Все",
       "className": "btn-outline-dark"
     },
     {
+      "id": "fire",
       "element": "fire",
       "label": "Огонь",
       "className": "btn-danger"
     },
     {
+      "id": "water",
       "element": "water",
       "label": "Вода",
       "className": "btn-primary"
     },
     {
+      "id": "wind",
       "element": "wind",
       "label": "Ветер",
       "className": "btn-success"
     },
     {
+      "id": "earth",
       "element": "earth",
       "label": "Земля",
       "className": "btn-secondary"
